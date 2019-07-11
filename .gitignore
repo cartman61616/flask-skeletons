@@ -1,1 +1,4 @@
 .DS_Store
+GraphQL/mysql/venv/
+GraphQL/mysql/.DS_Store
+GraphQL/mysql/.idea/
