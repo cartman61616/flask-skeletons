@@ -1,2 +1,2 @@
 # flask-skeletons
-This branch is for GraphQL using MySQL as the datasource
+This branch is for REST using MySQL as the datasource
