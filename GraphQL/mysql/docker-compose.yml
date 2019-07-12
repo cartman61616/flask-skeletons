@@ -5,14 +5,14 @@ services:
     container_name: flask
     build: .
     ports: ['5000:5000']
-    volumes: ['./usr/src/app']
+    volumes: ['.:/usr/src/app']
     restart: always
     environment:
-      ENV: DEV
+      ENV: DEVELOPMENT
       DB_USERNAME: username
       DB_PASSWORD: password
       DB_DATABASE: database_name
-      DB_HOST: localhost
+      DB_HOST: database
     links:
       - database
 

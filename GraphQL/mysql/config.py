@@ -13,9 +13,11 @@ class Config(object):
 class DevConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + os.environ['DB_USERNAME'] + ':' + os.environ['DB_PASSWORD'] + '@' + \
-                              os.environ['DB_HOST'] + ":3306" + os.environ['DB_DATABASE']
+                              os.environ['DB_HOST'] + ":3306/" + os.environ['DB_DATABASE']
+
 
 class ProdConfig(Config):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + os.environ['DB_USERNAME'] + ':' + os.environ['DB_PASSWORD'] + '@' + \
-                              os.environ['DB_HOST'] + ":3306" + os.environ['DB_DATABASE']
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + os.environ['DB_USERNAME'] + ':' + os.environ['DB_PASSWORD'] + '@'\
+                              + os.environ['DB_HOST'] + ":3306/" + os.environ['DB_DATABASE']
+
